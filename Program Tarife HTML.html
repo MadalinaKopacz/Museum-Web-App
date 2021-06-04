@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rezervari</title>
+    <script src="Rezervari js.js" defer></script>
+    <link href="D:\Facultate\Anul 1\Semestrul 2\TW\Laborator\Proiect Laborator\Program Tarife CSS.css" rel="stylesheet">
+</head>
+
+<body onload='document.rezervare.email.focus()'>
+    <header>
+        <nav id="MainMenu">
+            <nav class="dropdown">
+                <p class="AltePg" id="InfoUtile"><a href="InfoUtile.html">Info Utile</a></p>
+                <nav class="dropdown-content">
+                    <a href="D:\Facultate\Anul 1\Semestrul 2\TW\Laborator\Proiect Laborator\Program Tarife HTML.html">Program și Tarife</a>
+                    <a href="Contact">Contact</a>
+                </nav>
+            </nav>
+            <p class="AltePg" id="Expozitii">
+                <a href="Expozitii.html">Expoziții</a>
+            </p>
+            <p class="AltePg" id="Evenimente"><a href="Evenimente.html">Evenimente</a></p>
+            <p id="bara-cautare">Search</p>
+            <p class="AltePg" id="Signin"><a href="Signin.html">SignIn</a></p>
+            <p class="AltePg" id="Login"><a href="Login.html">LogIn</a></p>
+        </nav>
+        <div>
+            <h1 id="title">Rezervari </h1>
+        </div>
+    </header>
+    <main>
+        <form name="rezervare" method="post" action="http://localhost:5000/rezervari" id="formRezervare">
+            <div>
+                <label for="inputNume">Nume</label>
+                <input type="text" name="nume" id="inputNume" placeholder="Scrie nume">
+            </div>
+            <div>
+                <label for="inputPrenume">Prenume</label>
+                <input type="text" name="prenume" id="inputPrenume" placeholder="Scrie prenume">
+            </div>
+            <div>
+                <label for="inputEmail">Email</label>
+                <input type="text" name="email" id="inputEmail" placeholder="Scrie email">
+                <input type="text" name="emailValidated" id="emailValidated" disabled value="Email invalid" class="invalid">
+            </div>
+            <div>
+                <label for="interval">Alegeti intervalul orar</label>
+                <select id="interval" name="listaIntervale">
+              <option value="11-14">11:00-14:00</option>
+              <option value="14-17">14:00-17:00</option>
+              <option value="17-20">17:00-20:00</option>
+            </select>
+            </div>
+            <div>
+                <label for="inputReducere">Reducere</label>
+                <input type="text" name="reducere" id="inputReducere" placeholder="Introdu cod reducere">
+            </div>
+            <div>
+                <label for="inputMentiuni">Mentiuni</label>
+                <textarea id="inputMentiuni" name="mentiuni" rows="2" cols="30">
+                   
+                </textarea>
+            </div>
+            <div id="caracterPersDiv">
+                <label for="inputCaracterPers">Sunteti de acord cu prelucrarea datelor cu caracter personal?</label>
+                <input type="checkbox" name="caracterPers" id="inputCaracterPers">
+                <p id="Negare">Daca nu sunteti de acord, nu va putem inregistra datele.</p>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+
+    </main>
+</body>
+
+</html>
